@@ -1,0 +1,12 @@
+.git
+.gitignore
+.devenv*
+.direnv
+__pycache__
+*.pyc
+tests/
+.flake8
+devenv.nix
+.pytest_cache
+.envrc
+.envrc.local
