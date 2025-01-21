@@ -3,6 +3,8 @@
 This project is a simple example HTTP API server built with FastAPI for demonstrating how to apply asynchronous
 IO in a standard Python project.
 
+See [main.py](src/main.py) for the main entry point, and [services/external_api.py](src/services/external_api.py) for the service that makes HTTP requests to an external API (https://jsonplaceholder.typicode.com).
+
 ToC:
 
 - [Prerequisites](#prerequisites)
