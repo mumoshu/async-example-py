@@ -91,6 +91,13 @@ Under the hood, we are powered by the following technologies:
 - [ASGI](https://asgi.readthedocs.io/en/latest/) (`Asynchronous Server Gateway Interface`), a standard interface between web servers and async web applications and servers.
 - [Uvicorn](https://www.uvicorn.org/) is a lightning-fast ASGI server implementation, using [uvloop](https://github.com/MagicStack/uvloop) replacing the default asyncio event loop and [httptools](https://github.com/MagicStack/httptools) replacing the default asyncio parser.
 
+### Python asyncio gotchas
+
+It's async IO, but not multi-threaded by default.
+If you want to mix multi-threads and async IO, you need to be careful to schedule async IO operations to not move across threads, because async IO operations are generally not thread-safe.
+
+See [this](https://docs.python.org/3/library/asyncio-dev.html#concurrency-and-multithreading) for more details.
+
 ### How Async IO Works in General
 
 Asynchronous I/O allows programs to handle multiple I/O operations concurrently without using multiple threads or processes. Here's how it works under the hood:
